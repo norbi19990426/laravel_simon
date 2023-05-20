@@ -8,4 +8,12 @@ Route::get('/ingredientList', [IngredientController::class, 'index']);
 
 Route::post('/ingredientCreate', [IngredientController::class, 'newIngredient']);
 
-Route::post('/orderCreate', [OrderController::class, 'newOrder']);
+Route::post('/orderCreate', [OrderController::class, 'orderCreate']);
+
+Route::get('/orderList', [OrderController::class, 'orderList']);
+
+Route::delete('/orderDelete/{orderId}', [OrderController::class, 'orderDelete']);
+
+Route::post('/orderUpdate/{orderId}', [OrderController::class, 'orderUpdate']);
+
+Route::post('/orderBasedOnIngredient/{orderId}', [OrderController::class, 'orderBasedOnIngredient']);

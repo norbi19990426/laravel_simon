@@ -9,7 +9,7 @@ class IngredientController extends Controller
 {
     public function index(){
         $ingredient = Ingredient::all();
-        return $ingredient;
+        return response()->json($ingredient);
     }
     public function newIngredient(Request $request){
         $newIngredient = $request->all();
@@ -20,6 +20,6 @@ class IngredientController extends Controller
         $ingredient->save();
 
         $ingredientAll = Ingredient::all();
-        return $ingredientAll;
+        return response()->json($ingredientAll);
     }
 }

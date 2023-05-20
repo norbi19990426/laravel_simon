@@ -14,6 +14,9 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         'api/*',
         '/ingredientCreate',
-        '/orderCreate'
+        '/orderCreate',
+        '/orderDelete/*',
+        '/orderUpdate/*',
+        '/orderBasedOnIngredient/*'
     ];
 }
